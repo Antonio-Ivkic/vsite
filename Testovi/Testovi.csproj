@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFED0044-861F-45B3-A74B-FDB832D51014}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vsite.CSharp.KontrolaToka.Testovi</RootNamespace>
+    <AssemblyName>Testovi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ConsoleTest.cs" />
+    <Compile Include="TestDosegaImena.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestForeach.cs" />
+    <Compile Include="TestForVsWhile.cs" />
+    <Compile Include="TestGrananjaIf.cs" />
+    <Compile Include="TestGrananjaSwitch.cs" />
+    <Compile Include="TestMetodaProširenja.cs" />
+    <Compile Include="TestNaredbeBreakContinue.cs" />
+    <Compile Include="TestPetljeWhileDoWhile.cs" />
+    <Compile Include="TestUsporedbeRealnihBrojeva.cs" />
+    <Compile Include="TestUvjetnogPridruživanja.cs" />
+    <Compile Include="TestNulStapajućegOperatora.cs" />
+    <Compile Include="TestNulUvjetnogOperatora.cs" />
+    <Compile Include="TestYield.cs" />
+    <Compile Include="TestBeskonačniNizYield.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DosegImena\DosegImena.csproj">
+      <Project>{4895f638-4074-47ed-98b3-a7bbcb519b77}</Project>
+      <Name>DosegImena</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\foreach\Foreach.csproj">
+      <Project>{6f492c77-6f5a-42a9-8a70-6ea50e990b36}</Project>
+      <Name>Foreach</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\forVsWhile\ForVsWhile.csproj">
+      <Project>{6eac6742-3ba1-40ce-b742-639a596526ec}</Project>
+      <Name>ForVsWhile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrananjeIf\GrananjeIf.csproj">
+      <Project>{630fd746-19a6-4f82-9a9d-84a53b0b4185}</Project>
+      <Name>GrananjeIf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrananjeSwitch\GrananjeSwitch.csproj">
+      <Project>{64dfb018-3634-4a83-8410-fa0109db5935}</Project>
+      <Name>GrananjeSwitch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetodeProsirenja\MetodeProširenja.csproj">
+      <Project>{ac9a5a1b-07a6-4214-a1d3-6aef29d8c53e}</Project>
+      <Name>MetodeProširenja</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NaredbeBreakContinue\NaredbeBreakContinue.csproj">
+      <Project>{952b5dd4-2adf-488d-bb60-4175e47c38d8}</Project>
+      <Name>NaredbeBreakContinue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NeograniceniNizYield\NeograničeniNizYield.csproj">
+      <Project>{ee64a76b-66c0-4dc4-b7ba-7ca8d8a9288a}</Project>
+      <Name>NeograničeniNizYield</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NulStapajuciOperator\NullStapajućiOperator.csproj">
+      <Project>{9960c839-b950-4460-bcde-532126dadd33}</Project>
+      <Name>NullStapajućiOperator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NulUvjetniOperator\NulUvjetniOperator.csproj">
+      <Project>{f4ca502b-b264-44ab-9cc8-db76f6d17bac}</Project>
+      <Name>NulUvjetniOperator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PetljeWhileDoWhile\PetljeWhileDoWhile.csproj">
+      <Project>{2f144b24-edee-4254-b090-02bd834eaf81}</Project>
+      <Name>PetljeWhileDoWhile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usporedba Realnih Brojeva\UsporedbeRealnihBrojeva.csproj">
+      <Project>{0fcc0640-dce2-4ab0-b960-4fb788764028}</Project>
+      <Name>UsporedbeRealnihBrojeva</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UvjetnoPridruzivanje\UvjetnoPridruživanje.csproj">
+      <Project>{68561cb3-24a6-4c53-9d2a-3909a28ffbf1}</Project>
+      <Name>UvjetnoPridruživanje</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yield\Yield.csproj">
+      <Project>{1f3d2610-c66d-49da-bbd6-431427180593}</Project>
+      <Name>Yield</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
