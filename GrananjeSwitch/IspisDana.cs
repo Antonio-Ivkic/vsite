@@ -13,10 +13,18 @@ namespace Vsite.CSharp.KontrolaToka
             switch (danUTjednu)
             {
                 // TODO:071 Napisati grane case za svaki dan u tjednu tako da vraćaju "ponedjeljak" za DayOfWeek.Monday, "utorak" za DayOfWeek.Tuesday itd.
-
+                case (DayOfWeek.Monday):
+                    Console.WriteLine("Ponedjeljak");
+                    break;
+                case (DayOfWeek.Tuesday):
+                    Console.WriteLine("Utorak");
+                    break;
+                case (DayOfWeek.Wednesday):
+                    return ("Srijeda");
+                    break;
                 // TODO:072 Za nepodržane vrijednosti treba baciti iznimku tipa ArgumentOutOfRangeException:
                 default:
-                    throw new NotImplementedException();
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
