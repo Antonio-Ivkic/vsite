@@ -32,7 +32,6 @@ namespace Vsite.CSharp.KontrolaToka
             yield return 25;
         }
 
-        // TODO:132 Promijenite donju metodu tako da umjesto cijele liste vraća iterator
         public static IList<int> FibonacciList()
         {
             List<int> rezultat = new List<int>();
@@ -43,18 +42,45 @@ namespace Vsite.CSharp.KontrolaToka
             int trenutni = 1;
             while (prethodni < int.MaxValue / 2)
             {
-                // TODO:131 Promijenite petlju tako da se unutar petlje provjerava je li donja operacija bacila OverflowException i u tom slučaju prekida petlju
-                int zbroj = prethodni + trenutni;
-                prethodni = trenutni;
-                trenutni = zbroj;
-                rezultat.Add(trenutni);
+                try
+                {
+                    int zbroj = prethodni + trenutni;
+                    prethodni = trenutni;
+                    trenutni = zbroj;
+                    rezultat.Add(trenutni);
+                }
+                catch (OverflowException)
+                {
+                    break;
+                }                            
             }
             return rezultat;
         }
 
         public static IEnumerable<int> FibonacciIEnumerable()
         {
-            throw new NotImplementedException();
+
+            yield return 0;
+            yield return 1;
+
+            int prethodni = 0;
+            int trenutni = 1;
+            while (prethodni < int.MaxValue / 2)
+            {
+                try
+                {
+                    int zbroj = prethodni + trenutni;
+                    prethodni = trenutni;
+                    trenutni = zbroj;
+                    
+                }
+                catch (OverflowException)
+                {
+                    break;
+                }
+                yield return trenutni;
+            }
+            yield break;
         }
 
     }
