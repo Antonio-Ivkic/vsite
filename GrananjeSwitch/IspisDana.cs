@@ -14,14 +14,15 @@ namespace Vsite.CSharp.KontrolaToka
             {
                 // TODO:071 Napisati grane case za svaki dan u tjednu tako da vraćaju "ponedjeljak" za DayOfWeek.Monday, "utorak" za DayOfWeek.Tuesday itd.
                 case (DayOfWeek.Monday):
-                    Console.WriteLine("Ponedjeljak");
-                    break;
+                    return "ponedjeljak";
                 case (DayOfWeek.Tuesday):
-                    Console.WriteLine("Utorak");
-                    break;
+                    return "utorak";
                 case (DayOfWeek.Wednesday):
-                    return ("Srijeda");
-                    break;
+                    return "Srijeda";
+                case (DayOfWeek.Thursday):
+                    return "cetvrtak";
+                case (DayOfWeek.Friday):
+                    return "petak";
                 // TODO:072 Za nepodržane vrijednosti treba baciti iznimku tipa ArgumentOutOfRangeException:
                 default:
                     throw new ArgumentOutOfRangeException();
